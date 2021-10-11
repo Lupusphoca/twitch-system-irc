@@ -6,17 +6,10 @@ namespace PierreARNAUDET.TwitchChat
 
     public class DebugAutomaticConnection : MonoBehaviour
     {
-        [SerializeField]
-        private TwitchChatConnection twitchChatConnection;
-
-        [SerializeField]
-        private string password;
-
-        [SerializeField]
-        private string username;
-
-        [SerializeField]
-        private string channelName;
+        [SerializeField] private TwitchChatConnection twitchChatConnection;
+        [SerializeField] private string password;
+        [SerializeField] private string username;
+        [SerializeField] private string channelName;
 
         private void Start()
         {

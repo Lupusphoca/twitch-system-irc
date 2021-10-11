@@ -7,8 +7,7 @@ namespace PierreARNAUDET.TwitchChat
 
     public class TwitchChatBox : MonoBehaviour
     {
-        [SerializeField]
-        private Text chatBox;
+        [SerializeField] private Text chatBox;
 
         public void Display(string author, string message)
         {
