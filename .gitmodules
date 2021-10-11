@@ -1,0 +1,3 @@
+[submodule "Assets/Modules/Framework"]
+	path = Assets/Modules/Framework
+	url = https://github.com/Lupusphoca/framework.git
