@@ -2,12 +2,12 @@ namespace PierreARNAUDET.TwitchChat
 {
     using UnityEngine;
 
-    using PierreARNAUDET.Core.Events;
     using static PierreARNAUDET.TwitchChat.TwitchData;
 
     public class TwitchChatReader : MonoBehaviour
     {
-        public StringStringEvent stringStringEvent;
+        [Header("Required parameters")]
+        [SerializeField] UniqueAuthorsParameters uniqueAuthorsParameters;
 
         private void Update()
         {
@@ -22,7 +22,7 @@ namespace PierreARNAUDET.TwitchChat
             if (tcpClient.Available > 0)
             {
                 var message = streamReader.ReadLine();
-                Debug.Log(message);
+                //Debug.Log(message);
 
                 //* Twitch sends a PING message every 5 minutes or so. We MUST respond back with PONG or we will be disconnected.
                 if (message.Contains("PING"))
@@ -60,7 +60,7 @@ namespace PierreARNAUDET.TwitchChat
                             twitchCommandData);
                     }
 
-                    stringStringEvent.Invoke(author, message);
+                    uniqueAuthorsParameters.VerifyAuthorState(author, message);
                 }
             }
         }

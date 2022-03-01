@@ -28,6 +28,7 @@ namespace PierreARNAUDET.TwitchChat
                 streamWriter.WriteLine("NICK " + username);
                 streamWriter.WriteLine("USER " + username + " 8 * :" + username);
                 streamWriter.WriteLine("JOIN #" + channelName);
+                streamWriter.WriteLineAsync($"PRIVMSG #{channelName} :Hey I just started my IRC bot");
                 streamWriter.Flush();
             }
         }

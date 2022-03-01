@@ -35,6 +35,6 @@ namespace PierreARNAUDET.TwitchChat
         public static StreamWriter streamWriter;
         #endregion
 
-        public static string[] messages = new string[15];
+        public static string[] messages = new string[20];
     }
 }
