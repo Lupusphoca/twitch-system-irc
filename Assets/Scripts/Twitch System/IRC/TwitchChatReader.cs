@@ -8,7 +8,8 @@ namespace PierreARNAUDET.TwitchUtilitary
     using PierreARNAUDET.Core.Attributes;
     using static PierreARNAUDET.TwitchUtilitary.TwitchStaticData;
     using static PierreARNAUDET.TwitchUtilitary.ColorStringHelper;
-    
+    using static PierreARNAUDET.TwitchUtilitary.TwitchIRCAuthorParametersData;
+
     public class TwitchChatReader : MonoBehaviour
     {
         [Data]

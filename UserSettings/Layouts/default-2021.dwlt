@@ -40,9 +40,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 607
-    width: 1058
-    height: 340
+    y: 561
+    width: 974
+    height: 386
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 23}
@@ -69,12 +69,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1058
+    width: 974
     height: 947
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 93
+  controlID: 143
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -90,12 +90,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 530
+    x: 581
     y: 0
-    width: 332
-    height: 493
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 365
+    height: 305
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -120,12 +120,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 862
-    height: 493
+    width: 946
+    height: 305
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 64
+  controlID: 110
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 358
+    x: 384
     y: 0
-    width: 504
-    height: 454
+    width: 562
+    height: 642
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 24}
@@ -170,13 +170,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 493
-    width: 862
-    height: 454
+    y: 305
+    width: 946
+    height: 642
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 119
+  controlID: 17
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,8 +194,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 358
-    height: 454
+    width: 384
+    height: 642
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 19}
@@ -220,14 +220,14 @@ MonoBehaviour:
   - {fileID: 7}
   m_Position:
     serializedVersion: 2
-    x: 1058
+    x: 974
     y: 0
-    width: 862
+    width: 946
     height: 947
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 63
+  controlID: 16
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 62
+  controlID: 142
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,10 +270,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 530
-    height: 493
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 581
+    height: 305
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -367,8 +367,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1058
-    height: 607
+    width: 974
+    height: 561
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 22}
@@ -401,14 +401,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 1075
-    height: 586
+    width: 973
+    height: 540
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_PosLeft: {x: 0, y: 0}
-  m_PosRight: {x: 0, y: 1570}
+  m_PosRight: {x: 0, y: 1020}
   m_Scope: 1
   m_SplitterFlex: 0.2
   m_SearchText: 
@@ -456,260 +456,308 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 1037
-    height: 546
+    width: 973
+    height: 540
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   hasRefreshed: 1
   availablePackages:
-  - Id: TwitchLib
-    Version: 3.4.1
-    Title: TwitchLib
-    Description: Twitch C# library for accessing Twitch chat and whispers with events,
-      Twitch API with both authenticated and unauthenticated calls, and PubSub with
-      events.
+  - Id: Microsoft.CSharp
+    Version: 4.7.0
+    Title: Microsoft.CSharp
+    Description: 'Provides support for compilation and code generation, including
+      dynamic, using the C# language.
+
+
+      Commonly Used Types:
+
+      Microsoft.CSharp.RuntimeBinder.Binder
+
+      Microsoft.CSharp.RuntimeBinder.RuntimeBinderException
+
+      Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo
+
+      Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfoFlags
+
+      Microsoft.CSharp.RuntimeBinder.CSharpBinderFlags
+
+
+      When
+      using NuGet 3.x this package requires at least version 3.4.'
     Summary: 
-    ReleaseNotes: See changelog of included packages for release notes
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib/3.4.1/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib/3.4.1
-    DownloadCount: 177089
-    Authors: swiftyspiffy,Prom3theu5,Syzuna,LuckyNoS7evin
+    ReleaseNotes: https://go.microsoft.com/fwlink/?LinkID=799421
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.CSharp/4.7.0/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CSharp/4.7.0
+    DownloadCount: 1602930994
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib
+    ProjectUrl: https://github.com/dotnet/corefx
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Api.Core.Enums
-    Version: 3.7.0
-    Title: TwitchLib.Api.Core.Enums
-    Description: Project containing the enums of TwitchLib.Api
+  - Id: Microsoft.CodeAnalysis.CSharp
+    Version: 4.3.1
+    Title: Microsoft.CodeAnalysis.CSharp
+    Description: ".NET Compiler Platform (\"Roslyn\") support for C#, Microsoft.CodeAnalysis.CSharp.dll.\n   
+      \n      More details at https://aka.ms/roslyn-packages\n      This package
+      was built from the source at https://github.com/dotnet/roslyn/commit/4bdc8414790101a4da120a92cc4bc0154ac787ca."
     Summary: 
-    ReleaseNotes: Incremental changes.
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib.Api.Core.Enums/3.7.0/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Api.Core.Enums/3.7.0
-    DownloadCount: 241147
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp/4.3.1/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CodeAnalysis.CSharp/4.3.1
+    DownloadCount: 369151906
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Api
+    ProjectUrl: https://github.com/dotnet/roslyn
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Api
-    Version: 3.7.0
-    Title: TwitchLib.Api
-    Description: Api component of TwitchLib. This component allows you to access
-      the Twitch API, as well as undocumented and third party APIs.
+  - Id: Microsoft.CodeAnalysis.Common
+    Version: 4.3.1
+    Title: Microsoft.CodeAnalysis.Common
+    Description: "A shared package used by the Microsoft .NET Compiler Platform (\"Roslyn\").\n     
+      Do not install this package manually, it will be added as a prerequisite by
+      other packages that require it.\n    \n      More details at https://aka.ms/roslyn-packages\n     
+      This package was built from the source at https://github.com/dotnet/roslyn/commit/4bdc8414790101a4da120a92cc4bc0154ac787ca."
     Summary: 
-    ReleaseNotes: Added GetCharityCampaigns support, fixed GetChannelVip and UserChatColor
-      models, fixed issues with the GetStreamMarkers API call, Fixed Prediction model
-      issues, TwitchLib now builds on .NET 6 SDK instead of deprecated .NET 5, Code
-      Cleanup
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib.Api/3.7.0/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Api/3.7.0
-    DownloadCount: 195287
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Common/4.3.1/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CodeAnalysis.Common/4.3.1
+    DownloadCount: 418058540
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Api
+    ProjectUrl: https://github.com/dotnet/roslyn
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Api.Core
-    Version: 3.7.0
-    Title: TwitchLib.Api.Core
-    Description: Project containing the core of TwitchLib.Api
+  - Id: Microsoft.CodeAnalysis.Analyzers
+    Version: 3.3.3
+    Title: Microsoft.CodeAnalysis.Analyzers
+    Description: Analyzers for consumers of Microsoft.CodeAnalysis NuGet package,
+      i.e. extensions and applications built on top of .NET Compiler Platform (Roslyn).
+      This package is included as a development dependency of Microsoft.CodeAnalysis
+      NuGet package and does not need to be installed separately if you are referencing
+      Microsoft.CodeAnalysis NuGet package.
     Summary: 
-    ReleaseNotes: Incremental changes.
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib.Api.Core/3.7.0/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Api.Core/3.7.0
-    DownloadCount: 204547
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Analyzers/3.3.3/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CodeAnalysis.Analyzers/3.3.3
+    DownloadCount: 336108983
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Api
+    ProjectUrl: https://github.com/dotnet/roslyn-analyzers
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Api.Core.Interfaces
-    Version: 3.7.0
-    Title: TwitchLib.Api.Core.Interfaces
-    Description: Project containing all of the interfaces used in TwitchLib.Api
+  - Id: Microsoft.CodeAnalysis.CSharp.Workspaces
+    Version: 4.3.1
+    Title: Microsoft.CodeAnalysis.CSharp.Workspaces
+    Description: ".NET Compiler Platform (\"Roslyn\") support for analyzing C# projects
+      and solutions.\n    \n      More details at https://aka.ms/roslyn-packages\n     
+      This package was built from the source at https://github.com/dotnet/roslyn/commit/4bdc8414790101a4da120a92cc4bc0154ac787ca."
     Summary: 
-    ReleaseNotes: Incremental changes.
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib.Api.Core.Interfaces/3.7.0/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Api.Core.Interfaces/3.7.0
-    DownloadCount: 235164
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp.Workspaces/4.3.1/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CodeAnalysis.CSharp.Workspaces/4.3.1
+    DownloadCount: 128053719
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Api
+    ProjectUrl: https://github.com/dotnet/roslyn
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Api.Helix
-    Version: 3.7.0
-    Title: TwitchLib.Api.Helix
-    Description: Project containing the Helix section of TwitchLib.Api
+  - Id: Microsoft.EntityFrameworkCore.Analyzers
+    Version: 6.0.10
+    Title: Microsoft.EntityFrameworkCore.Analyzers
+    Description: CSharp Analyzers for Entity Framework Core.
     Summary: 
-    ReleaseNotes: Incremental changes.
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib.Api.Helix/3.7.0/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Api.Helix/3.7.0
-    DownloadCount: 189851
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Analyzers/6.0.10/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.EntityFrameworkCore.Analyzers/6.0.10
+    DownloadCount: 468774382
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Api
+    ProjectUrl: https://docs.microsoft.com/ef/core/
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Communication
-    Version: 1.0.4
-    Title: TwitchLib.Communication
-    Description: Connection library used throughout TwitchLib to replace third party
-      depedencies.
+  - Id: Microsoft.CodeAnalysis.Workspaces.Common
+    Version: 4.3.1
+    Title: Microsoft.CodeAnalysis.Workspaces.Common
+    Description: "A shared package used by the .NET Compiler Platform (\"Roslyn\")
+      including support for analyzing projects and solutions.\n      Do not install
+      this package manually, it will be added as a prerequisite by other packages
+      that require it.\n    \n      More details at https://aka.ms/roslyn-packages\n     
+      This package was built from the source at https://github.com/dotnet/roslyn/commit/4bdc8414790101a4da120a92cc4bc0154ac787ca."
     Summary: 
-    ReleaseNotes: Fixing reconnect issues
-    LicenseUrl: https://opensource.org/licenses/MIT
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Communication/1.0.4
-    DownloadCount: 117870
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.CodeAnalysis.Workspaces.Common/4.3.1/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CodeAnalysis.Workspaces.Common/4.3.1
+    DownloadCount: 129212683
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Communication
+    ProjectUrl: https://github.com/dotnet/roslyn
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Api.Helix.Models
-    Version: 3.7.0
-    Title: TwitchLib.Api.Helix.Models
-    Description: Project containing the Helix models used in TwitchLib.Api
+  - Id: Microsoft.CodeAnalysis.VisualBasic
+    Version: 4.3.1
+    Title: Microsoft.CodeAnalysis.VisualBasic
+    Description: ".NET Compiler Platform (\"Roslyn\") support for Visual Basic, Microsoft.CodeAnalysis.VisualBasic.dll.\n   
+      \n      More details at https://aka.ms/roslyn-packages\n      This package
+      was built from the source at https://github.com/dotnet/roslyn/commit/4bdc8414790101a4da120a92cc4bc0154ac787ca."
     Summary: 
-    ReleaseNotes: Incremental changes.
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib.Api.Helix.Models/3.7.0/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Api.Helix.Models/3.7.0
-    DownloadCount: 196369
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.CodeAnalysis.VisualBasic/4.3.1/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CodeAnalysis.VisualBasic/4.3.1
+    DownloadCount: 101517195
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Api
+    ProjectUrl: https://github.com/dotnet/roslyn
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Client.Models
-    Version: 3.2.6
-    Title: TwitchLib.Client.Models
-    Description: Project contains all of the models used in TwitchLib.Client.
+  - Id: Microsoft.Net.Compilers
+    Version: 4.2.0
+    Title: Microsoft.Net.Compilers
+    Description: "Note: This package is deprecated. Please use Microsoft.Net.Compilers.Toolset
+      instead\n\n      .NET Compilers package.\n      Referencing this package will
+      cause the project to be built using the C# and Visual Basic compilers contained
+      in the package, as opposed to the version installed with MSBuild.\n\n     
+      The tools in this package require .NET Framework 4.7.2+ \n\n      \n    \n     
+      More details at https://aka.ms/roslyn-packages\n      This package was built
+      from the source at https://github.com/dotnet/roslyn/commit/46c8f4f56765e16b92759de8098494b36cfb84f5."
     Summary: 
-    ReleaseNotes: Incremental changes. See commit history.
-    LicenseUrl: https://opensource.org/licenses/MIT
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Client.Models/3.2.6
-    DownloadCount: 151241
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.Net.Compilers/4.2.0/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.Net.Compilers/4.2.0
+    DownloadCount: 80557512
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Client
+    ProjectUrl: https://github.com/dotnet/roslyn
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Api.Core.Models
-    Version: 3.7.0
-    Title: TwitchLib.Api.Core.Models
-    Description: Project containing the core models used in TwitchLib.Api
+  - Id: Microsoft.CodeAnalysis.CSharp.Scripting
+    Version: 4.3.1
+    Title: Microsoft.CodeAnalysis.CSharp.Scripting
+    Description: "Microsoft .NET Compiler Platform (\"Roslyn\") CSharp scripting
+      package.\n    \n      More details at https://aka.ms/roslyn-packages\n     
+      This package was built from the source at https://github.com/dotnet/roslyn/commit/4bdc8414790101a4da120a92cc4bc0154ac787ca."
     Summary: 
-    ReleaseNotes: Incremental changes.
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib.Api.Core.Models/3.7.0/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Api.Core.Models/3.7.0
-    DownloadCount: 212150
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.CodeAnalysis.CSharp.Scripting/4.3.1/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CodeAnalysis.CSharp.Scripting/4.3.1
+    DownloadCount: 23138892
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Api
+    ProjectUrl: https://github.com/dotnet/roslyn
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Client.Enums
-    Version: 3.2.6
-    Title: TwitchLib.Client.Enums
-    Description: Project containing all of the enums used in TwitchLib.Client.
+  - Id: Microsoft.CodeQuality.Analyzers
+    Version: 3.3.2
+    Title: Microsoft.CodeQuality.Analyzers
+    Description: Microsoft recommended code quality rules implemented as analyzers
+      using the .NET Compiler Platform (Roslyn). This package is included as a part
+      of Microsoft.CodeAnalysis.FxCopAnalyzers NuGet package and does not need to
+      be installed separately.
     Summary: 
-    ReleaseNotes: Incremental changes. See commit history.
-    LicenseUrl: https://opensource.org/licenses/MIT
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Client.Enums/3.2.6
-    DownloadCount: 156019
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.CodeQuality.Analyzers/3.3.2/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CodeQuality.Analyzers/3.3.2
+    DownloadCount: 48383692
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Client
+    ProjectUrl: https://github.com/dotnet/roslyn-analyzers
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Client
-    Version: 3.2.6
-    Title: TwitchLib.Client
-    Description: Client component of TwitchLib. This component allows you to access
-      Twitch chat and whispers, as well as the events that are sent over this connection.
+  - Id: Microsoft.NetFramework.Analyzers
+    Version: 3.3.2
+    Title: Microsoft.NetFramework.Analyzers
+    Description: Microsoft recommended API usage rules for APIs specific to the full
+      .NetFramework which are not present in .NetCore, implemented as analyzers using
+      the .NET Compiler Platform (Roslyn). This package is included as a part of
+      Microsoft.CodeAnalysis.FxCopAnalyzers NuGet package and does not need to be
+      installed separately.
     Summary: 
-    ReleaseNotes: Includes a fix for the socket reconnect issues and support for
-      the new announcement feature
-    LicenseUrl: https://opensource.org/licenses/MIT
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Client/3.2.6
-    DownloadCount: 157929
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/3.3.2/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.NetFramework.Analyzers/3.3.2
+    DownloadCount: 46753903
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Client
+    ProjectUrl: https://github.com/dotnet/roslyn-analyzers
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Api.V5
-    Version: 3.3.0
-    Title: TwitchLib.Api.V5
-    Description: Project containing the V5 section of TwitchLib.Api
+  - Id: Microsoft.NetCore.Analyzers
+    Version: 3.3.2
+    Title: Microsoft.NetCore.Analyzers
+    Description: Microsoft recommended .NetCore API usage rules implemented as analyzers
+      using the .NET Compiler Platform (Roslyn). This package is included as a part
+      of Microsoft.CodeAnalysis.FxCopAnalyzers NuGet package and does not need to
+      be installed separately.
     Summary: 
-    ReleaseNotes: Incremental changes.
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib.Api.V5/3.3.0/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Api.V5/3.3.0
-    DownloadCount: 174321
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/Microsoft.NetCore.Analyzers/3.3.2/license
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.NetCore.Analyzers/3.3.2
+    DownloadCount: 47793202
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Api
+    ProjectUrl: https://github.com/dotnet/roslyn-analyzers
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.PubSub
-    Version: 3.2.5
-    Title: TwitchLib.PubSub
-    Description: PubSub component of TwitchLib. This component allows you to access
-      Twitch's PubSub event system and subscribe/unsubscribe from topics.
-    Summary: 
-    ReleaseNotes: Includes a fix for the socket reconnect issues
-    LicenseUrl: https://opensource.org/licenses/MIT
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.PubSub/3.2.5
-    DownloadCount: 124257
-    Authors: swiftyspiffy,Prom3theu5,Syzuna,LuckyNoS7evin
+  - Id: Microsoft.CodeDom.Providers.DotNetCompilerPlatform
+    Version: 3.6.0
+    Title: CodeDOM Providers for .NET Compiler Platform ("Roslyn")
+    Description: "Replacement CodeDOM providers that use the new .NET Compiler Platform
+      (\"Roslyn\") compiler as a service APIs. This provides support for new language
+      features in systems using CodeDOM (e.g. ASP.NET runtime compilation) as well
+      as improving the compilation performance of these systems.\n        \n       
+      This package was built from the source at https://github.com/aspnet/RoslynCodeDomProvider/commit/a47558d50056fed7b745cfdfebc392e0e82e1b8d"
+    Summary: Replacement CodeDOM providers that use the new .NET Compiler Platform
+      ("Roslyn") compiler as a service APIs.
+    ReleaseNotes: 
+    LicenseUrl: http://www.microsoft.com/web/webpi/eula/net_library_eula_ENU.htm
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.CodeDom.Providers.DotNetCompilerPlatform/3.6.0
+    DownloadCount: 92184714
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.PubSub
+    ProjectUrl: http://www.asp.net/
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
     RepositoryCommit: 
-  - Id: TwitchLib.Api.V5.Models
-    Version: 3.4.0
-    Title: TwitchLib.Api.V5.Models
-    Description: Project containing the V5 models used in TwitchLib.Api
+  - Id: Microsoft.AspNetCore.Mvc.Analyzers
+    Version: 2.2.0
+    Title: Microsoft.AspNetCore.Mvc.Analyzers
+    Description: CSharp Analyzers for ASP.NET Core MVC.
     Summary: 
-    ReleaseNotes: Incremental changes.
-    LicenseUrl: https://www.nuget.org/packages/TwitchLib.Api.V5.Models/3.4.0/license
-    DownloadUrl: http://www.nuget.org/api/v2/package/TwitchLib.Api.V5.Models/3.4.0
-    DownloadCount: 181067
-    Authors: swiftyspiffy, Prom3theu5, Syzuna, LuckyNoS7evin
+    ReleaseNotes: 
+    LicenseUrl: https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt
+    DownloadUrl: http://www.nuget.org/api/v2/package/Microsoft.AspNetCore.Mvc.Analyzers/2.2.0
+    DownloadCount: 67416177
+    Authors: Microsoft
     Icon: {fileID: 0}
-    ProjectUrl: https://github.com/TwitchLib/TwitchLib.Api
+    ProjectUrl: https://asp.net/
     RepositoryUrl: 
     RepositoryType: 0
     RepositoryBranch: 
@@ -765,10 +813,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1058
-    y: 566
-    width: 356
-    height: 433
+    x: 974
+    y: 378
+    width: 382
+    height: 621
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -785,7 +833,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 0
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts/Twitch System/API/PubSub
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -800,7 +849,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 44530000
     m_LastClickedID: 21316
-    m_ExpandedIDs: 00000000385400003a5400003c5400003e54000040540000425400004454000046540000485400004a5400004c5400004e54000050540000525400005454000056540000585400005a5400005c5400005e54000060540000625400006454000066540000685400006a5400006c5400006e54000070540000725400007454000076540000785400007a5400007c5400007e54000080540000825400008454000086540000885400008a5400008c5400008e54000090540000925400009454000096540000985400009a5400009c5400009e540000a0540000a2540000a4540000a6540000a8540000
+    m_ExpandedIDs: 000000004c5400004e54000050540000525400005454000056540000585400005a5400005c5400005e54000060540000625400006454000066540000685400006a5400006c5400006e54000070540000725400007454000076540000785400007a5400007c5400007e54000080540000825400008454000086540000885400008a5400008c5400008e54000090540000925400009454000096540000985400009a5400009c5400009e540000a0540000a2540000a4540000a6540000a8540000aa540000ac540000ae540000b0540000b2540000b4540000b6540000b8540000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -828,18 +877,18 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000385400003a5400003c5400003e54000040540000425400004454000046540000485400004a5400004c5400004e54000050540000525400005454000056540000585400005a5400005c5400005e54000060540000625400006454000066540000685400006a5400006c5400006e54000070540000725400007454000076540000785400007a5400007c5400007e54000080540000825400008454000086540000885400008a5400008c5400008e54000090540000925400009454000096540000985400009a540000a0540000a4540000a8540000
+    m_ExpandedIDs: ffffffff000000004c5400004e54000050540000525400005454000056540000585400005a5400005c5400005e54000060540000625400006454000066540000685400006a5400006c5400006e54000070540000725400007454000076540000785400007a5400007c5400007e54000080540000825400008454000086540000885400008a5400008c5400008e54000090540000925400009454000096540000985400009a5400009c5400009e540000a0540000a2540000a4540000a6540000a8540000aa540000ac540000ae540000b0540000b2540000b4540000b6540000b8540000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: TwitchUnityWebRequest
-      m_OriginalName: TwitchUnityWebRequest
+      m_Name: TwitchPubSubConnection
+      m_OriginalName: TwitchPubSubConnection
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 5302
+      m_UserData: 4702
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -904,10 +953,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1058
+    x: 974
     y: 73
-    width: 528
-    height: 472
+    width: 579
+    height: 284
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -945,10 +994,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1588
+    x: 1555
     y: 73
-    width: 331
-    height: 472
+    width: 364
+    height: 284
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -958,7 +1007,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3afbffffce530000
+      m_ExpandedIDs: 3afbffffe2530000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1004,8 +1053,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 1057
-    height: 586
+    width: 973
+    height: 540
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1207,9 +1256,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.6674285, y: -4.3535433, z: 0.5230042}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: -0.6674285, y: -4.3535433, z: 0.5230042}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1260,9 +1309,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.834523
+    m_Target: 10
     speed: 2
-    m_Value: 10.834523
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1308,9 +1357,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 680
-    width: 1057
-    height: 319
+    y: 634
+    width: 973
+    height: 365
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1321,7 +1370,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1057, y: 298}
+  m_TargetSize: {x: 973, y: 344}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1336,10 +1385,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -528.5
-    m_HBaseRangeMax: 528.5
-    m_VBaseRangeMin: -149
-    m_VBaseRangeMax: 149
+    m_HBaseRangeMin: -486.5
+    m_HBaseRangeMax: 486.5
+    m_VBaseRangeMin: -172
+    m_VBaseRangeMax: 172
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1357,23 +1406,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1057
-      height: 298
+      width: 973
+      height: 344
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 528.5, y: 149}
+    m_Translation: {x: 486.5, y: 172}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -528.5
-      y: -149
-      width: 1057
-      height: 298
+      x: -486.5
+      y: -172
+      width: 973
+      height: 344
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1057, y: 319}
+  m_LastWindowPixelSize: {x: 973, y: 365}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1399,10 +1448,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1416
-    y: 566
-    width: 503
-    height: 433
+    x: 1358
+    y: 378
+    width: 561
+    height: 621
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

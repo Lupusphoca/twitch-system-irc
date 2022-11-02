@@ -3,13 +3,15 @@ namespace PierreARNAUDET.TwitchUtilitary
     using System.Collections.Generic;
     using System.IO;
     using System.Net.Sockets;
-
+    using System.Net.WebSockets;
+    
     using Newtonsoft.Json;
 
     public static class TwitchStaticData
     {
         #region Common Data
         public static TwitchCredentials twitchCredentials;
+        
         public struct TwitchCredentials
         {
             [JsonProperty("client_id", NullValueHandling = NullValueHandling.Ignore)]
@@ -28,8 +30,9 @@ namespace PierreARNAUDET.TwitchUtilitary
         public static string accessToken;
         #endregion
 
-        #region User
-        public static TwitchUser twitchUser;
+        #region User Informations
+        public static TwitchUser mainTwitchUser;
+
         public struct TwitchUser
         {
             [JsonProperty("data", NullValueHandling = NullValueHandling.Ignore)]
@@ -85,62 +88,8 @@ namespace PierreARNAUDET.TwitchUtilitary
         public static string[] messages;
         #endregion
 
-        #region API/GlobalBadges
-        public static GlobalBadges globalBadges;
-        public struct GlobalBadges
-        {
-            [JsonProperty("data", NullValueHandling = NullValueHandling.Ignore)]
-            public List<GlobalBadges.Data> ListData;
-
-            public struct Data
-            {
-                [JsonProperty("set_id", NullValueHandling = NullValueHandling.Ignore)]
-                public string SetId { get; set; }
-                [JsonProperty("versions", NullValueHandling = NullValueHandling.Ignore)]
-                public List<Versions> Versions;
-            }
-
-            public struct Versions
-            {
-                [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
-                public string Id { get; set; }
-                [JsonProperty("image_url_1x", NullValueHandling = NullValueHandling.Ignore)]
-                public string ImageUrl1x { get; set; }
-                [JsonProperty("image_url_2x", NullValueHandling = NullValueHandling.Ignore)]
-                public string ImageUrl2x { get; set; }
-                [JsonProperty("image_url_4x", NullValueHandling = NullValueHandling.Ignore)]
-                public string ImageUrl4x { get; set; }
-            }
-        }
-        #endregion
-
-        #region IRC Author Data
-        public static Dictionary<string, AuthorParameters> authors2 = new Dictionary<string, AuthorParameters>();
-        public static List<AuthorParameters> authors = new List<AuthorParameters>();
-        public struct AuthorParameters
-        {
-            public string Username { get; set; }
-            public UserPrivmsgMetadata UserPrivmsgMetaData { get; set; }
-            public string DisplayUsername { get => "<color=" + UserPrivmsgMetaData.Color + ">" + UserPrivmsgMetaData.DisplayName + "</color>"; } //* Used to replace author string. Combinaison of username and color.
-            public string[] urlBadges;
-        }
-
-        public struct UserPrivmsgMetadata
-        {
-            public string BadgeInfo { get; set; }
-            public string Badges { get; set; }
-            public int Bits { get; set; }
-            public string Color { get; set; }
-            public string DisplayName { get; set; }
-            public string Emotes { get; set; }
-            public string Id { get; set; }
-            public bool Mod { get; set; }
-            public bool Subscriber { get; set; }
-            public bool Turbo { get; set; }
-            public string UserId { get; set; }
-            public string UserType { get; set; }
-            public bool Vip { get; set; }
-        }
+        #region PubSub
+        public static ClientWebSocket pubSubWebSocket;
         #endregion
     }
 }

@@ -4,9 +4,9 @@ namespace PierreARNAUDET.TwitchUtilitary
     using Newtonsoft.Json;
     using UnityEngine;
 
-    using static PierreARNAUDET.TwitchUtilitary.TwitchStaticData;
     using static PierreARNAUDET.TwitchUtilitary.ColorStringHelper;
-    
+    using static PierreARNAUDET.TwitchUtilitary.TwitchGlobalBadgesData;
+
     class TwitchGetGlobalBadges
     {
         public async Task GetGlobalBadges()

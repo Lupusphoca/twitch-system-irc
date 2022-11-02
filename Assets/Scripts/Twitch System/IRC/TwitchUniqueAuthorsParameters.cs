@@ -3,14 +3,16 @@ namespace PierreARNAUDET.TwitchUtilitary
     using System;
 
     using UnityEngine;
-
-    using static PierreARNAUDET.TwitchUtilitary.TwitchStaticData;
+    
+    using static PierreARNAUDET.TwitchUtilitary.ColorStringHelper;
+    using static PierreARNAUDET.TwitchUtilitary.TwitchGlobalBadgesData;
+    using static PierreARNAUDET.TwitchUtilitary.TwitchIRCAuthorParametersData;
     
     public static class TwitchUniqueAuthorsParameters
     {
         public static AuthorParameters VerifyAuthorState(string author, UserPrivmsgMetadata userData)
         {
-            if (authors2.TryGetValue(author, out AuthorParameters value))
+            if (authors.TryGetValue(author, out AuthorParameters value))
             {
                 return value;
             }
@@ -22,13 +24,13 @@ namespace PierreARNAUDET.TwitchUtilitary
 
         public static AuthorParameters GetAuthorParameters(string author)
         {
-            if (authors2.TryGetValue(author, out AuthorParameters value))
+            if (authors.TryGetValue(author, out AuthorParameters value))
             {
                 return value;
             }
             else
             {
-                return authors[0];
+                return new AuthorParameters();
             }
         }
 
@@ -39,8 +41,8 @@ namespace PierreARNAUDET.TwitchUtilitary
             authorParameters.UserPrivmsgMetaData = userData;
             authorParameters.Username = author;
             authorParameters.urlBadges = GetURLBadgesAuthor(author, authorParameters.UserPrivmsgMetaData.Badges);
-            authors2.Add(author, authorParameters);
-            Debug.Log("New register !");
+            authors.Add(author, authorParameters);
+            Debug.Log("New register !".ColorString(ColorType.CommonConsole));
             return authorParameters;
         }
 

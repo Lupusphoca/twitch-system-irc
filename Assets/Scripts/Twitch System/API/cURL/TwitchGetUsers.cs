@@ -17,8 +17,8 @@ namespace PierreARNAUDET.TwitchUtilitary
             var tuwr = new TwitchUnityWebRequest();
             var result = await tuwr.Get(url);
 
-            twitchUser = JsonConvert.DeserializeObject<TwitchUser>(result);
-            Debug.Log($"{"Get Users cURL".ColorString(ColorType.Success)} Success");
+            mainTwitchUser = JsonConvert.DeserializeObject<TwitchUser>(result);
+            Debug.Log($"{"Get Users cURL".ColorString(ColorType.Success)} Success : {result}");
         }
     }
 }
