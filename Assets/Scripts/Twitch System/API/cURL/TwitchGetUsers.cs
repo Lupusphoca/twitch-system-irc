@@ -7,7 +7,7 @@ namespace PierreARNAUDET.TwitchUtilitary
 
     using static PierreARNAUDET.TwitchUtilitary.TwitchStaticData;
     using static PierreARNAUDET.TwitchUtilitary.ColorStringHelper;
-    
+
     class TwitchGetUsers
     {
         public async Task GetUsers()
@@ -18,7 +18,10 @@ namespace PierreARNAUDET.TwitchUtilitary
             var result = await tuwr.Get(url);
 
             twitchUser = JsonConvert.DeserializeObject<TwitchUser>(result);
-            Debug.Log($"{"Get Users cURL".ColorString(ColorType.Success)} Success");
+
+            var debug = $"{"Get Users cURL".ColorString(ColorType.Success)} : Success";
+            Debug.Log(debug);
+            twitchInformationBox.Display(debug);
         }
     }
 }

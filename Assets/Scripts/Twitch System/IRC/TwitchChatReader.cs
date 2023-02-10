@@ -1,6 +1,7 @@
 namespace PierreARNAUDET.TwitchUtilitary
 {
     using System;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using UnityEngine;
@@ -8,11 +9,14 @@ namespace PierreARNAUDET.TwitchUtilitary
     using PierreARNAUDET.Core.Attributes;
     using static PierreARNAUDET.TwitchUtilitary.TwitchStaticData;
     using static PierreARNAUDET.TwitchUtilitary.ColorStringHelper;
-    
+    using static PierreARNAUDET.TwitchUtilitary.TwitchIRCAuthorParametersData;
+    using static PierreARNAUDET.TwitchUtilitary.TwitchGlobalEmotesData;
+
     public class TwitchChatReader : MonoBehaviour
     {
         [Data]
         [SerializeField] TwitchChatBox twitchChatBox;
+        [SerializeField] EmoteDisplayManager emoteDisplayManager;
 
         private string line;
 
@@ -25,7 +29,10 @@ namespace PierreARNAUDET.TwitchUtilitary
                     // Example message :
                     // :mytwitchchannel!mytwitchchannel@mytwitchchannel.tmi.twitch.tv PRIVMSG #mytwitchchannel :test
                     line = await streamReader.ReadLineAsync(); //* while(true) work because of the await here that pause and wait untill it receives a message
-                    Debug.Log($"{"IRC".ColorString(ColorType.IRC)} {line}");
+
+                    var debug = $"{"IRC".ColorString(ColorType.IRC)} {line}";
+                    Debug.Log(debug);
+
                     if (line != string.Empty)
                     {
                         var lineSplit = line.Split(' ');
@@ -72,8 +79,12 @@ namespace PierreARNAUDET.TwitchUtilitary
                     var author = lineSplit[1].Substring(1, exclamationPointPosition - 1); // Get string from character at place 1 to exclamationPointPosition - 1 which is the username
 
                     //* Get user message.
-                    var message = line.Split(':')[2];
+                    // var message = line.Split(':')[2];
+                    var message = line.Split('#')[2];
+                    message = message.Split(':')[1];
                     Debug.Log($"{author.ColorString(ColorType.IRC)} said <color=white>'{message}'</color>");
+
+                    EmotesDetection(ref message);
 
                     //* Stock metadata info of the user
                     var infos = lineSplit[0].Split(';');
@@ -116,8 +127,8 @@ namespace PierreARNAUDET.TwitchUtilitary
                                 userData.Id = splitInfo[1];
                                 break;
                             case "mod":
-                                var outMod = false;
-                                var parseMod = Boolean.TryParse(splitInfo[1], out outMod);
+                                var outMod = 0;
+                                var parseMod = Int32.TryParse(splitInfo[1], out outMod);
                                 if (parseMod)
                                 {
                                     userData.Mod = outMod;
@@ -128,8 +139,8 @@ namespace PierreARNAUDET.TwitchUtilitary
                                 }
                                 break;
                             case "subscriber":
-                                var outSubcriber = false;
-                                var parseSubscriber = Boolean.TryParse(splitInfo[1], out outSubcriber);
+                                var outSubcriber = 0;
+                                var parseSubscriber = Int32.TryParse(splitInfo[1], out outSubcriber);
                                 if (parseSubscriber)
                                 {
                                     userData.Subscriber = outSubcriber;
@@ -140,8 +151,8 @@ namespace PierreARNAUDET.TwitchUtilitary
                                 }
                                 break;
                             case "turbo":
-                                var outTurbo = false;
-                                var parseTurbo = Boolean.TryParse(splitInfo[1], out outTurbo);
+                                var outTurbo = 0;
+                                var parseTurbo = Int32.TryParse(splitInfo[1], out outTurbo);
                                 if (parseTurbo)
                                 {
                                     userData.Turbo = outTurbo;
@@ -201,6 +212,54 @@ namespace PierreARNAUDET.TwitchUtilitary
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void EmotesDetection(ref string message)
+        {
+            var splitEmotes = line.Split(";");
+            var emotesLine = string.Empty;
+            if (splitEmotes[5].StartsWith("emotes="))
+            {
+                emotesLine = splitEmotes[5];
+            }
+            else
+            {
+                emotesLine = splitEmotes[6];
+            }
+
+            var startIndex = 7;
+            emotesLine = emotesLine.Substring(startIndex);
+            if (emotesLine != string.Empty)
+            {
+                Debug.Log($"Emotes used line : <color=white>'{emotesLine}'</color>");
+
+                var emotesList = emotesLine.Split("/");
+
+                for (int i = 0; i < emotesList.Length; i++)
+                {
+                    var emoteContent = emotesList[i].Split(':');
+
+                    var emoteId = emoteContent[0];
+                    var data = TwitchGlobalEmotesData.globalEmotes.ListData.FirstOrDefault(x => x.Id == emoteId);
+                    var emoteNumber = emoteContent[1].Split(",").Length;
+
+                    for (int j = 0; j < emoteNumber; j++)
+                    {
+                        emoteDisplayManager.Process(data);
+                        Debug.Log($"Send this image '{data.Images.Url4x}' in flow script.");
+                    }
+                    
+                    Debug.Log($"This emote id : {emoteId}, correspond to this emote name : {data.Name} and has been called {emoteNumber} time(s).");
+                    message = message.Replace(data.Name, $"<i><alpha=#88>{data.Name}<alpha=#FF></i>");
+
+                    // var emotePos = emoteContent[1].Split(",");
+                    // for (int j = 0; j < emotePos.Length; j++)
+                    // {
+                    //     var positions = emotePos[j].Split("-");
+                    //     Debug.Log($"Emote positions are : {positions[0]} and {positions[1]}");
+                    // }
+                }
             }
         }
     }

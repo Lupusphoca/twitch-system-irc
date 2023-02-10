@@ -3,8 +3,9 @@ namespace PierreARNAUDET.TwitchUtilitary
     using System;
 
     using UnityEngine;
-
-    using static PierreARNAUDET.TwitchUtilitary.TwitchStaticData;
+    
+    using static PierreARNAUDET.TwitchUtilitary.TwitchGlobalBadgesData;
+    using static PierreARNAUDET.TwitchUtilitary.TwitchIRCAuthorParametersData;
     
     public static class TwitchUniqueAuthorsParameters
     {

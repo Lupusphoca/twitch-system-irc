@@ -33,7 +33,7 @@ namespace PierreARNAUDET.TwitchUtilitary
 
             TwitchStaticData.messages = Shift(TwitchStaticData.messages, messageToShift);
 
-            var text = "Chat :" + "\n";
+            var text = string.Empty;
             foreach (string messageToDisplay in TwitchStaticData.messages)
             {
                 text = text + messageToDisplay + "\n";

@@ -13,16 +13,19 @@ namespace PierreARNAUDET.TwitchUtilitary
 
     public class TwitchUtilitaryManager : MonoBehaviour
     {
-        [Settings]
-        [SerializeField, Range(10, 100)] private int displayMessages = 20;
-
-        [Debug]
         [field: SerializeField] public Color colorCommonConsole { get; private set; }
         [field: SerializeField] public Color colorIRC { get; private set; }
         [field: SerializeField] public Color colorPubSubReceive { get; private set; }
         [field: SerializeField] public Color colorPubSubSend { get; private set; }
         [field: SerializeField] public Color colorSuccess { get; private set; }
         [field: SerializeField] public Color colorError { get; private set; }
+
+        [Data]
+        [SerializeField] private TwitchInformationBox twitchInformationBox;
+
+        [Settings]
+        [SerializeField, Range(10, 100)] private int displayMessages = 20;
+        [SerializeField, Range(10, 100)] private int displayInformations = 10;
 
         public const string userAccessTokenKey = "user_access_token_key";
         public const string appAccessTokenKey = "app_access_token_key";
@@ -41,6 +44,8 @@ namespace PierreARNAUDET.TwitchUtilitary
             ExceptionHelper.ThrowIfEmpty(twitchCredentials.Scopes, value => value.Length == 0, $"At least one scope is required");
 
             messages = new string[displayMessages];
+            TwitchStaticData.twitchInformationBox = twitchInformationBox;
+            informations = new string[displayInformations];
 
             HexColorIRC = "#" + ColorUtility.ToHtmlStringRGB(colorIRC);
             HexColorPubSubReceive = "#" + ColorUtility.ToHtmlStringRGB(colorPubSubReceive);
@@ -68,6 +73,9 @@ namespace PierreARNAUDET.TwitchUtilitary
 
             var twitchGetGlobalBadges = new TwitchGetGlobalBadges();
             await twitchGetGlobalBadges.GetGlobalBadges();
+
+            var twitchGetGlobalEmotes = new TwitchGetGlobalEmotes();
+            await twitchGetGlobalEmotes.GetGlobalEmotes();
 
             OnAccessTokenAuthorized?.Invoke();
         }

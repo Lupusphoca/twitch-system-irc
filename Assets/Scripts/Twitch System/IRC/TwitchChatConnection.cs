@@ -7,6 +7,7 @@ namespace PierreARNAUDET.TwitchUtilitary
     using UnityEngine;
 
     using PierreARNAUDET.Core.Attributes;
+    using static PierreARNAUDET.TwitchUtilitary.ColorStringHelper;
     using static PierreARNAUDET.TwitchUtilitary.TwitchStaticData;
 
     public class TwitchChatConnection : MonoBehaviour
@@ -23,6 +24,14 @@ namespace PierreARNAUDET.TwitchUtilitary
             TwitchUtilitaryManager.OnAccessTokenAuthorized += Connect;
         }
 
+        private void OnApplicationQuit()
+        {
+            if (tcpClient != null)
+            {
+                tcpClient.Close();
+            }
+        }
+
         private void Connect()
         {
             _ = ConnectTask();
@@ -30,6 +39,10 @@ namespace PierreARNAUDET.TwitchUtilitary
 
         public async Task ConnectTask()
         {
+            var debug = $"{"Process IRC connection".ColorString(ColorType.IRC)} : Waiting ...";
+            Debug.Log(debug);
+            twitchInformationBox.Display(debug);
+
             var userAccessToken = accessToken;
             var botName = twitchCredentials.BotName.ToLower();
             var channelConnection = twitchCredentials.ChannelConnection.ToLower();
@@ -56,6 +69,7 @@ namespace PierreARNAUDET.TwitchUtilitary
 
                 await Task.Delay(2000); //* Only here to avoid connection problem
 
+                twitchInformationBox.Display($"{"IRC".ColorString(ColorType.IRC)} : Success setup");
                 _ = twitchChatReader.Read();
             }
         }

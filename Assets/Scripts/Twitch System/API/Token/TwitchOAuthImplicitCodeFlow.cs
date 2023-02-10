@@ -9,7 +9,7 @@ namespace PierreARNAUDET.TwitchUtilitary
 
     using static PierreARNAUDET.TwitchUtilitary.TwitchStaticData;
     using static PierreARNAUDET.TwitchUtilitary.ColorStringHelper;
-    
+
     class TwitchOAuthImplicitCodeFlow
     {
         private string safetyCode;
@@ -102,7 +102,10 @@ namespace PierreARNAUDET.TwitchUtilitary
             }
 
             accessToken = match.Groups[1].Value;
-            Debug.Log($"{"OAuth Access Token".ColorString(ColorType.Success)} {match.Groups[1].Value}");
+            
+            var debug = $"{"OAuth Access Token".ColorString(ColorType.Success)} : Success";
+            Debug.Log(debug);
+            twitchInformationBox.Display(debug);
 
             httpListener.Stop();
         }

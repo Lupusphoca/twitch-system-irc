@@ -7,20 +7,20 @@ namespace PierreARNAUDET.TwitchUtilitary
 
     using static PierreARNAUDET.TwitchUtilitary.TwitchStaticData;
     using static PierreARNAUDET.TwitchUtilitary.ColorStringHelper;
-    using static PierreARNAUDET.TwitchUtilitary.TwitchGlobalBadgesData;
+    using static PierreARNAUDET.TwitchUtilitary.TwitchGlobalEmotesData;
 
-    class TwitchGetGlobalBadges
+    class TwitchGetGlobalEmotes
     {
-        public async Task GetGlobalBadges()
+        public async Task GetGlobalEmotes()
         {
-            var url = "https://api.twitch.tv/helix/chat/badges/global";
+            var url = "https://api.twitch.tv/helix/chat/emotes/global";
 
             var tuwr = new TwitchUnityWebRequest();
             var result = await tuwr.Get(url);
 
-            globalBadges = JsonConvert.DeserializeObject<GlobalBadges>(result);
+            globalEmotes = JsonConvert.DeserializeObject<GlobalEmotes>(result);
 
-            var debug = $"{"Get Global Badges cURL".ColorString(ColorType.Success)} : Success";
+            var debug = $"{"Get Global Emotes cURL".ColorString(ColorType.Success)} : Success";
             Debug.Log(debug);
             twitchInformationBox.Display(debug);
         }
